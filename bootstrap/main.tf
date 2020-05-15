@@ -9,7 +9,7 @@ terraform {
 }
 
 resource "google_storage_bucket" "terrform-state" {
-  name     = "utrakr-all"
+  name     = "utrakr-all-terraform-state"
   location = "us-central1"
   versioning {
     enabled = true
