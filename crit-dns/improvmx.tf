@@ -4,7 +4,7 @@ resource "google_dns_record_set" "spf" {
   type         = "TXT"
   ttl          = 300
 
-  rrdatas = ["v=spf1 include:spf.improvmx.com ~all"]
+  rrdatas = ["\"v=spf1 include:spf.improvmx.com ~all\""]
 }
 
 resource "google_dns_record_set" "mx" {
