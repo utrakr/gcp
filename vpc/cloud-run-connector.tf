@@ -28,7 +28,3 @@ resource "google_compute_firewall" "connector_allow" {
 
   source_ranges = toset([google_vpc_access_connector.connector.ip_cidr_range])
 }
-
-output "cloud_functions_connector_region" {
-  value = google_vpc_access_connector.connector.region
-}

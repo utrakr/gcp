@@ -15,3 +15,7 @@ terraform {
     prefix = "vpc"
   }
 }
+
+output "cloud_functions_connector_region" {
+  value = google_vpc_access_connector.connector.region
+}
