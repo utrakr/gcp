@@ -19,3 +19,7 @@ terraform {
 output "cloud_functions_connector_region" {
   value = google_vpc_access_connector.connector.region
 }
+
+output "cloud_functions_connector_id" {
+  value = google_vpc_access_connector.connector.id
+}
