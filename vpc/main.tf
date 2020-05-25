@@ -16,10 +16,19 @@ terraform {
   }
 }
 
-output "cloud_functions_connector_region" {
-  value = google_vpc_access_connector.connector.region
+data "google_compute_network" "default" {
+  name = "default"
 }
 
-output "cloud_functions_connector_id" {
-  value = google_vpc_access_connector.connector.id
+data "google_compute_subnetwork" "default" {
+  name   = "default"
+  region = "us-central1"
+}
+
+output "google_compute_network_default" {
+  value = data.google_compute_network.default
+}
+
+output "google_compute_subnetwork_default" {
+  value = data.google_compute_subnetwork.default
 }
