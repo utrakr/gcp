@@ -16,6 +16,6 @@ terraform {
   }
 }
 
-output "root_zone_name" {
-  value = google_dns_managed_zone.root.name
+output "google_dns_managed_zone_root" {
+  value = google_dns_managed_zone.root
 }
